@@ -1,0 +1,70 @@
+@import '../../style/color';
+@import '../../components/AccountPanel';
+@import '../../components/CannedMessage';
+@import '../../components/Chat';
+@import '../../components/ContactList';
+@import '../../components/ContactSearchModal';
+@import '../../components/CreateGuestModal';
+@import '../../components/ErrorMessage';
+@import '../../components/GuestInfo';
+@import '../../components/LoginForm';
+@import '../../components/MessageForm';
+
+.Dashboard {
+    flex-shrink: 1;
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+
+    // It's not responsive, let's face it!
+    min-width: 820px;
+
+    &-leftPane {
+        flex: 200px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        border-right: 1px solid $gray-light;
+
+        &-header {
+            padding: 12px 12px 0 12px;
+            flex: 0 0 auto;
+        }
+
+        &-caption {
+            flex-shrink: 0;
+            padding: 16px 12px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-section {
+            flex-grow: 0;
+            flex-shrink: 1;
+            max-height: 50%;
+            display: flex;
+            flex-direction: column;
+
+            i {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+
+    &-middlePane {
+        flex: 5 0;
+        border-right: 1px solid $gray-lighter;
+    }
+
+    &-rightPane {
+        flex: 2 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

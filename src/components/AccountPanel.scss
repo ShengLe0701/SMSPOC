@@ -1,0 +1,14 @@
+.AccountPanel {
+    flex: 0 0 auto;
+    border-bottom: 1px solid $gray-lighter;
+    padding: 0 12px 12px;
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    white-space: nowrap;
+
+    &-logout, &-admin {
+        display: inline;
+        margin-left: 12px;
+    }
+}

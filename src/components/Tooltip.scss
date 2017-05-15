@@ -1,0 +1,32 @@
+@import '../style/color';
+
+.AaTooltip {
+    position: relative;
+
+    &-text {
+        position: absolute;
+        z-index: 1;
+        visibility: hidden;
+        bottom: 105%;
+
+        white-space: nowrap;
+        padding: 2px 12px;
+        background-color: $black;
+        color: $white;
+        text-align: center;
+        border-radius: 4px;
+        display: inline-block;
+
+        .AaTooltip:hover & {
+            visibility: visible;
+        }
+
+        .AaTooltip.theme-align-right & {
+            right: 0;
+        }
+
+        .AaTooltip.theme-align-left & {
+            left: 0;
+        }
+    }
+}

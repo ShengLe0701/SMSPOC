@@ -1,0 +1,49 @@
+@import '../style/color';
+@import 'MessageList';
+@import 'MessageForm';
+
+.Chat {
+    $padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+
+    &-header {
+        flex: 0 0 auto;
+        padding: $padding 12px;
+        text-align: center;
+        border-bottom: 1px solid $gray-lighter;
+    }
+
+    &-body {
+        flex: 1 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    &-error {
+        flex: 0 0 auto;
+        padding: $padding;
+        background-color: $brand-danger;
+        color: $white;
+        text-align: center;
+
+        a {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+
+    &-footer {
+        padding: $padding;
+        flex: 0 0 auto;
+        border-top: 1px solid $gray-lighter;
+    }
+}
+
+.ChatPlaceholder {
+    padding-top: 50px;
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+@import 'style/color';
+@import 'components/Report';
+
+.Reports {
+    flex-grow: 1;
+    align-self: stretch;
+    display: flex;
+    justify-content: stretch;
+
+    &-nav {
+        flex-grow: 0;
+        width: 200px;
+        padding: 12px;
+        border-right: 1px solid $gray-lighter;
+        overflow: auto;
+    }
+}

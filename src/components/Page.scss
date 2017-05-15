@@ -1,0 +1,33 @@
+@import 'style/color';
+@import 'style/grid';
+@import '../../node_modules/bootstrap/scss/mixins/_breakpoints';
+
+.Page {
+    overflow: auto;
+    background-color: $gray-lightest;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    &-container {
+        padding: 24px;
+        background-color: $white;
+        min-height: 100%;
+
+        &.is-narrow {
+            margin-right: auto;
+
+            @include media-breakpoint-up(md) {
+                max-width: map-get($page-max-widths, md);
+                border-right: 1px solid $gray-lighter;
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: map-get($page-max-widths, lg);
+                border-right: 1px solid $gray-lighter;
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: map-get($page-max-widths, xl);
+                border-right: 1px solid $gray-lighter;
+            }
+        }
+    }
+}

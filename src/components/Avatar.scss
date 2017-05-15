@@ -1,0 +1,21 @@
+@import '../style/color';
+
+.Avatar {
+    $size: 32px;
+
+    background-color: $gray-lighter;
+    color: $gray-light;
+    width: $size;
+    height: $size;
+    line-height: $size;
+    text-align: center;
+    font-weight: 600;
+    border-radius: $size / 2;
+    whitespace: nowrap;
+    overflow: hidden;
+
+    &.theme-primary {
+        background-color: $brand-primary;
+        color: lighten($brand-primary, 40%);
+    }
+}

@@ -1,0 +1,13 @@
+@import '../style/color';
+
+.CannedMessageList {
+    &-list {
+        margin-top: 12px;
+    }
+
+    &-item {
+        margin-bottom: 12px;
+        background-color: $gray-lightest;
+        border-color: $gray-lighter;
+    }
+}

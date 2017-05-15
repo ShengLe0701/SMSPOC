@@ -1,0 +1,24 @@
+$btn-secondary-color: $white;
+$btn-secondary-bg: $gray-light;
+$btn-secondary-border: $btn-secondary-bg;
+
+$state-success-text:             darken($brand-success, 20%);
+$state-success-bg:               lighten($brand-success, 40%);
+$state-success-border:           lighten($brand-success, 30%);
+
+$state-info-text:                darken($brand-info, 20%);
+$state-info-bg:                  lighten($brand-info, 40%);
+$state-info-border:              lighten($brand-info, 30%);
+
+$input-border-focus: $brand-primary;
+
+$font-family-sans-serif: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-base: 0.9rem;
+$font-weight-normal: 400;
+$lead-font-weight: 400;
+$font-weight-bold: 600;
+$headings-font-weight: 600;
+
+$modal-content-border-width: 0;
+$modal-inner-padding: 20px;
+$modal-header-padding: $modal-inner-padding;

@@ -1,0 +1,200 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../style/color';
+
+.HomePage {
+    &-fold {
+        min-height: 650px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-nav {
+        width: 100%;
+        position: absolute;
+
+        a,
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: $white;
+        }
+    }
+
+    &-hero {
+        $shade: 40%;
+        $apply: 0.6;
+        $modifier: rgba(lighten($black, $shade), $apply);
+
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background-color: $brand-primary;
+
+        background:
+            linear-gradient(20deg, $brand-primary 20%, $brand-secondary 100%),
+            linear-gradient(0, $modifier 0%, $modifier 100%),
+            url('/images/hero.jpg');
+        background-blend-mode: color, normal;
+        background-size: cover;
+        background-position: 50% 70%;
+        color: $white;
+
+        &-logo {
+            max-width: 500px;
+        }
+
+        &-subheading {
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        &-tagline {
+            color: $white;
+            font-size: 24px;
+        }
+    }
+
+    &-form {
+        background-color: $gray-darker;
+        padding: 50px 0;
+
+        @include media-breakpoint-down(xs) {
+            padding: 20px 0;
+        }
+
+        &-heading {
+            text-align: center;
+        }
+
+        &-container {
+            display: flex;
+
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+            }
+        }
+
+        &-input {
+            flex: 1 0;
+            background-color: transparent;
+            border: 1px solid $brand-primary;
+            padding: 0 20px;
+            color: $white;
+            border-radius: 4px;
+            outline: none;
+            transition-duration: 0.2s;
+            transition-property: box-shadow;
+
+            &::-webkit-input-placeholder {
+                color: $brand-primary !important;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+                color: $brand-primary !important;
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+                color: $brand-primary !important;
+            }
+
+            &:-ms-input-placeholder {
+                color: $brand-primary !important;
+            }
+
+            &::placeholder {
+                color: $brand-primary !important;
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 2px rgba($brand-primary, 0.5);
+            }
+
+            &:nth-child(2) {
+                margin: 0 8px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                &:nth-child(2) {
+                    margin: 8px 0;
+                }
+            }
+        }
+
+        .btn {
+            flex: 1 0;
+        }
+    }
+
+    &-intro {
+        padding: 80px 0;
+
+        &-img {
+            height: 300px;
+
+            @include media-breakpoint-down(md) {
+                height: 200px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                height: auto;
+            }
+        }
+    }
+
+    &-about {
+        padding: 80px 0;
+
+        &-devices {
+            display: flex;
+            justify-content: stretch;
+            margin-bottom: 100px;
+        }
+
+        &-desktop {
+            flex: 3 0 0;
+        }
+        &-phone {
+            flex: 1 0 0;
+            padding-left: 5%;
+            padding-top: 15%;
+        }
+
+        &-feature {
+            margin-top: 60px;
+            align-items: center;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &-value {
+        padding: 50px 0;
+        background: $brand-primary;
+        color: $white;
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+    &-footer {
+        background-color: $gray-darker;
+        padding: 20px 0;
+        color: $brand-primary;
+    }
+
+    &-lead {
+        line-height: 1.2;
+        font-size: 32px;
+        color: $white;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 24px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.VoiceForwarding {
+    &-header {
+        flex: 0 0 auto;
+    }
+
+    &-body {
+        flex: 1 1 auto;
+        padding-left: 2px;
+        overflow-y: auto;
+    }
+
+    &-footer {
+        padding: 16px 2px;
+    }
+
+    .form-check-input {
+        margin-right: 0.5rem;
+    }
+}

@@ -1,0 +1,30 @@
+.MessageForm {
+    $spacing: 4px;
+
+    display: flex;
+    align-items: flex-start;
+    padding: 0 -#{$spacing/2};
+
+    form {
+        padding: 0;
+        margin: 0;
+    }
+
+    &-textGroup {
+        flex: 1 1 0px;
+        padding: 0 #{$spacing/2};
+
+        .input-group-btn {
+            vertical-align: top;
+        }
+    }
+
+    &-attach {
+        flex: 0 0 auto;
+        padding: 0 #{$spacing/2};
+
+        input.MessageForm-attach-fileInput {
+            display: none;
+        }
+    }
+}

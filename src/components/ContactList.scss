@@ -1,0 +1,47 @@
+@import '../style/color';
+
+.ContactList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex: 1 1 auto;
+
+    &-contact {
+        &:hover {
+            background-color: $gray-lighter;
+        }
+
+        &.theme-selected {
+            color: $brand-primary;
+            background-color: $gray-lighter;
+        }
+
+        &.theme-unread {
+            font-weight: 600;
+        }
+
+        &-link {
+            display: block;
+            padding: 2px 12px;
+            color: inherit;
+
+            &:hover,
+            &:active,
+            &:visited,
+            &:link {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        &-icon {
+            margin-right: 8px;
+            color: $brand-primary;
+        }
+    }
+}

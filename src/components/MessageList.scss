@@ -1,0 +1,102 @@
+@import '../style/color';
+@import 'Avatar';
+@import 'Tooltip';
+
+.MessageList {
+    list-style-type: none;
+    padding: 8px 12px;
+
+    &-datestamp {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    &-message {
+        padding: 4px 0;
+
+        &.theme-outbound {
+            text-align: right;
+        }
+
+        &.theme-inbound {
+            text-align: left;
+        }
+
+        &-bubbleGroup {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            .MessageList-message.theme-outbound & {
+                flex-direction: row-reverse;
+            }
+
+            .MessageList-message.theme-inbound & {
+                flex-direction: row;
+            }
+
+            &-avatar {
+                .MessageList-message.theme-outbound & {
+                    margin-left: 8px;
+                }
+
+                .MessageList-message.theme-inbound & {
+                    margin-right: 8px;
+                }
+            }
+
+            &-bubble {
+                $height: 32px;
+                $line-height: 24px;
+
+                display: inline-block;
+                border-radius: $height / 2;
+                line-height: $line-height;
+                padding: #{($height - $line-height) / 2} 12px;
+                max-width: 500px;
+                text-align: left;
+                background-color: $gray-lighter;
+                color: $gray-dark;
+
+                a,
+                a:active,
+                a:hover,
+                a:link,
+                a:visited {
+                    color: inherit;
+                    text-decoration: underline;
+                }
+
+                .MessageList-message.theme-highlighted & {
+                    background-color: $brand-primary;
+                    color: $white;
+                }
+
+                .MessageList-message.theme-warning & {
+                    background-color: $brand-danger;
+                    color: $white;
+                }
+
+                .MessageList-message.theme-success & {
+                    background-color: $brand-info;
+                    color: $white;
+                }
+
+                .MessageList-message.theme-outbound & {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+
+                .MessageList-message.theme-inbound & {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        &-timestamp {
+            padding: 0 52px;
+            font-size: 10px;
+        }
+    }
+}

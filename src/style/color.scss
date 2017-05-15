@@ -1,0 +1,21 @@
+$white: #fff;
+$black: #000;
+$gray-dark: #373a3c;
+$gray-darker: darken($gray-dark, 5%);
+$gray: #55595c !default;
+$gray-light: lighten(#818a91, 15%);
+$gray-lighter: #eceeef !default;
+$gray-lightest: #f7f7f9 !default;
+
+$brand-primary: #2EBA9B;
+$brand-primary-darker: #008769;
+$brand-primary-dark: #0EAC89;
+$brand-primary-light: #50CCB0;
+$brand-primary-lighter: #7EDFC9;
+
+$brand-secondary: #357bdb;
+$brand-success: rgb(46, 186, 153);
+$brand-info: rgb(35, 171, 219);
+$brand-warning: #f0ad4e;
+$brand-danger: #d9534f;
+$brand-inverse: $gray-dark;

@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "mocha": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "no-process-env": "error",
+    "new-cap": ["error", {
+      "capIsNew": false
+    }],
+    "import/no-unresolved": 0
+  },
+  "globals": {
+    "BUILD_TARGET": false,
+    "BUILD_NATIVE_CONFIG": false
+  }
+}

@@ -1,0 +1,10 @@
+@import '../style/color';
+
+.ContactSearchModal {
+    &-results {
+        min-height: 200px;
+        max-height: 70vh;
+        overflow-y: auto;
+        margin-top: 16px;
+    }
+}

@@ -1,0 +1,17 @@
+.GuestInfo {
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 12px 0 12px;
+
+    &-header {
+        flex: 0 0 auto;
+    }
+
+    &-container {
+        flex: 0 1 auto;
+        overflow-y: auto;
+    }
+}
